@@ -1,3 +1,4 @@
+
 **<span class="underline">A real time frequency finder by reading the
 PCM input.</span>**
 
@@ -55,51 +56,52 @@ real call. In orange it’s the Goertzel magnitude computed, in gray, it’s
 after I cleaned it and before pattern detection. The session is RING \*
 6 \> DECLINE \> BUSY \*25
 
-![](media/image2.png)
+![](https://i.imgur.com/iNE40ad.png)
 
 Below are the results
 
-Israel\_call\_from\_the\_CP2.pcm
-
-p=13 res=1 \[Israel\] \[Ring tone\] pat\_size=1100 dur=11000.000
-start=0.000 end=11.000
-
-p=13 res=1 \[Israel\] \[Ring tone\] pat\_size=1100 dur=11000.000
-start=11.370 end=22.370
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=23.320 end=25.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=26.320 end=28.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=29.320 end=31.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=32.320 end=34.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=35.320 end=37.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=38.320 end=40.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=41.320 end=43.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=44.320 end=46.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=47.320 end=49.820
-
-p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
-start=50.320 end=52.820
+> Israel\_call\_from\_the\_CP2.pcm
+> 
+> p=13 res=1 \[Israel\] \[Ring tone\] pat\_size=1100 dur=11000.000
+> start=0.000 end=11.000
+> 
+> p=13 res=1 \[Israel\] \[Ring tone\] pat\_size=1100 dur=11000.000
+> start=11.370 end=22.370
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=23.320 end=25.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=26.320 end=28.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=29.320 end=31.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=32.320 end=34.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=35.320 end=37.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=38.320 end=40.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=41.320 end=43.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=44.320 end=46.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=47.320 end=49.820
+> 
+> p=14 res=1 \[Israel\] \[Busy tone\] pat\_size=250 dur=2500.000
+> start=50.320 end=52.820
 
 **<span class="underline">How to build and run (on Linux here)</span>**
 
-gcc detect.c -o detect -lm && rm -f detect.txt && ./detect \> detect.csv
+> gcc detect.c -o detect -lm && rm -f detect.txt && ./detect \>
+> detect.csv
 
 It will compute all the PCM samples from the directory "pcm8kMono16ble".
 
@@ -114,16 +116,15 @@ Ffmpeg tools on windows
 
 Convert a wav to a wav 8000 Hz / Mono / 16 bits LE
 
-"c:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe" -i sample.wav -ar 8000 -ac
-1 -acodec pcm\_u8 sample8kMono.wav
+> "c:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe" -i sample.wav -ar 8000
+> -ac 1 -acodec pcm\_u8 sample8kMono.wav
 
 Convert all the wav of a directory to PCM 8k Mono 16 bits LE
 
-for %i in (../wav/\*) do "c:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe" -y
--i ../wav/%i -ar 8000 -ac 1 -f s16le -acodec pcm\_s16le %\~ni.pcm
+> for %i in (../wav/\*) do "c:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe"
+> -y > -i ../wav/%i -ar 8000 -ac 1 -f s16le -acodec pcm\_s16le %\~ni.pcm
 
-**<span class="underline">Useful
-links</span>**
+**<span class="underline">Useful links</span>**
 
 <http://en.wikipedia.org/wiki/Goertzel_algorithm>
 
