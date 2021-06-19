@@ -1,0 +1,23 @@
+Spain,0,Ring tone 1,425,1500,3000
+Spain,0,Ring tone 2,425,1000,4000
+Spain,1,Busy tone 1,425,200,200
+Spain,1,Busy tone 2,425,500,500
+France,0,Ring tone,440,1500,3500
+France,1,Busy tone,440,500,500
+Portugal,0,Ring tone 1,425,1000,5000
+Portugal,0,Ring tone 2,440,1000,4000
+Portugal,0,Ring tone 3,425,1500,3500
+Portugal,1,Busy tone 1,425,500,500
+Portugal,1,Busy tone 2 mobile,400,360,360
+Italy,0,Ring tone,425,1000,4000
+Italy,1,Busy tone,425,500,500
+Israel,0,Ring tone,400,1000,3000
+Israel,1,Busy tone,400,500,500
+Israel,1,Disconnect tone,400,300,200
+United Kingdom,1,Busy tone,400,375,375
+Argentina,0,Ring tone,425,1000,4000
+Argentina,1,Busy tone,425,300,200
+Brazil,0,Ring tone,425,1000,4000
+Brazil,1,Busy tone,425,250,250
+Peru,0,Ring tone,425,1500,3000
+Peru,1,Busy tone,425,500,500
